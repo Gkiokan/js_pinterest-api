@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/gkiokan.net.pinterest-core.css">
+    <title>Gkiokan.NET - Pinterest API Wrapper</title>
+</head>
+
+<body>
+
+    <div class='header'>
+        <div class='container'>                        
+            <h1>Pinterest API Wrapper</h1>
+            <h3>by Gkiokan Sali | Gkiokan.NET</h3>
+        </div>        
+    </div>
+    
+    <div class='main'>
+        <div class='container'>            
+            <section>
+                <header>
+                    <h2>Welcome to my Pinterest API Wrapper</h2>
+                </header>
+                
+                Today I'll show you, how you can use your own or whoevers Pinterest Account<br>
+                for getting the Pins from a specific Board and show them on your page.<br>
+                <br>
+                Current Data which are provided is my own one, Username: <span class='label label-success'>Gkiokan1337</span> and Board <span class='label label-info'>Ladies</span>.<br>
+                <br>
+                <h3>How To use this and make some magic :) </h3>
+                <h4>1. Create the Wrapper </h4>
+                We create a div with a specific class, which will contain all our Pins, lets call it <span class='label label-warning'>the-magic-wrapper</span>.<br>
+                <br>
+                
+                <h4>2. Call the Method</h4>
+                After we have declared our Wrapper - where obviosly all the Pins will be filled in - we just need to trigger the Pinterest API to get some magic.<br>     
+                In my case i will write following js code: <div class='label label-danger'>g.pinterest.getBoard('gkiokan1337/ladies', 'myTokenWhatever', '.the-magic-wrapper');</div>
+                <br>
+                <br>
+                <div class='the-magic-wrapper'></div>
+                
+                <footer class='inner_footer'>
+                    <div class='row'>
+                    <div class='col-xs-12 col-md-3'>
+                        <b>Projekt</b>: Pinterest API Wrapper<br>
+                        <b>Author</b>: Gkiokan Sali<br>
+                        <b>Version</b>: v.0.1 <br>     
+                        <b>Date</b>: 2016-02-19 @ 20:45<br>
+                    </div>
+                    <div class='col-xs-12 col-md-9'>
+                        <b>Information</b>:<br>
+                        This is a little Javascript Playarround thing for myself.<br>
+                        It will get my favorite Pins from my Board on Pinterest and show them here.<br>
+
+                    </div>
+                    </div>                    
+                </footer>
+            </section>            
+        </div>
+    </div>
+    
+    <div class='footer'>
+        <div class='container'>
+            <div class='row'>
+                    <div class='col-xs-12 col-md-3'>
+                        <b>Projekt</b>: Pinterest API Wrapper<br>
+                        <b>Author</b>: Gkiokan Sali<br>
+                        <b>Version</b>: v.0.1 <br>                        
+                    </div>
+                    <div class='col-xs-12 col-md-9'>
+                        <b>Information</b>:<br>
+                        This is a little Javascript Playarround thing for myself.<br>
+                        It will get my favorite Pins from my Board on Pinterest and show them here.<br>
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="assets/js/gkiokan.net.pinterest-api.js"></script>
+    <script>
+        // First we create our Object, this is important, because, the variable "board_ladies" will hold all the magic now.
+        // I've made this NOT autostart rending, because there may be situation and use cases where you want to load it 
+        // after some action has been triggered, or even better use this with your Action- and/or EventListeners.
+        var board_ladies = new g.pinterest('gkiokan1337/ladies', 'ATPiaAbYT4LDOu7pYTg6FB8W5HbkFDR02-7LcpdCyuuv-4BC8QAAAAA', '.the-magic-wrapper');        
+        
+        
+        // To show off, just run the render Method on the object.
+        board_ladies.render();
+    </script>
+</body>
+</html>

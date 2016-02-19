@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "gkiokan.net.pinterest-core.css",
+  "sources": [
+    "gkiokan.net.pinterest-core.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";AAIA,OAAO,CAAC;EACJ,OAAO,EAAE,IAAI,CAAC,GAAG;EACjB,gBAAgB,EAAE,OAAQ;EAC1B,KAAK,EAAC,IAAK,GAHN",
+  "names": []
+}
